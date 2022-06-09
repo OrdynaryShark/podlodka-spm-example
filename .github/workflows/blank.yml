@@ -14,5 +14,5 @@ jobs:
       - name: Updload frameworks
         uses: actions/upload-artifact@v3
         with:
-          name: Frameworks
+          name: frameworks
           path: Frameworks/
