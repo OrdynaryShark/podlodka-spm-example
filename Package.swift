@@ -4,25 +4,64 @@
 import PackageDescription
 
 let package = Package(
-    name: "SPM package structure",
-    products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
-            name: "SPM package structure",
-            targets: ["SPM package structure"]),
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
-    ],
+    name: "App",
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "SPM package structure",
-            dependencies: []),
-        .testTarget(
-            name: "SPM package structureTests",
-            dependencies: ["SPM package structure"]),
+        // Source code
+        .target(name: "Screens"),
+        
+        // Binary target (local)
+        .binaryTarget(name: "Database", path: "Frameworks/Database.xcframework"),
+        
+        // Binary target (global)
+        .binaryTarget(name: "Database_zipped", url: "Frameworks/Database.xcframework.zip", checksum: "")
     ]
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MARK: - Targets
+
+// MARK: Source code
+
+/*
+ 
+ let package = Package(
+     name: "App",
+     targets: [
+         .target(name: "Screens")
+     ]
+ )
+ 
+ */
+
+// MARK: Binary
+
+/*
+ 
+ let package = Package(
+     name: "App",
+     targets: [
+         .target(name: "Screens"),
+         .binaryTarget(name: "Database", path: "Frameworks/Database.xcframework")
+     ]
+ )
+ 
+ */
+
+// MARK: -
